@@ -1,0 +1,1 @@
+This is the project for competing to cryptonacademy course of middle smart contract developer.
