@@ -26,7 +26,9 @@ contract Donation {
     }
 
     receive() external payable {
-        donators.push(msg.sender);
+        if(DonationAmount[msg.sender] == 0) {
+            donators.push(msg.sender);
+        }
         DonationAmount[msg.sender] += msg.value;
         emit getDonation(msg.sender, msg.value);
     }
